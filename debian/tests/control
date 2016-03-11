@@ -1,0 +1,2 @@
+Test-Command: pear run-tests -r Mail_Mime-*/tests
+Depends: @, php-pear

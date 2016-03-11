@@ -1,0 +1,15 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@ --buildsystem=phppear --with phppear
+
+override_dh_auto_configure:
+	dh_auto_configure -O--buildsystem=phppear
+	sed -i '/phail\.php/d' */package.xml
+
+override_dh_auto_test:
+ifeq (,$(findstring nocheck, $(DEB_BUILD_OPTIONS)))
+	cd Mail_Mime-* && pear run-tests tests
+else
+	@echo "** tests disabled"
+endif
