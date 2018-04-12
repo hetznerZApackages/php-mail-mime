@@ -1,3 +1,9 @@
+php-mail-mime (1.10.0-2+hetz1~exp1) jessie-hetz-experimental; urgency=medium
+
+  * Backport from Stretch
+
+ -- Walter Kleynscheldt <walter.kleynscheldt@hetzner.co.za>  Thu, 12 Apr 2018 09:17:48 +0200
+
 php-mail-mime (1.10.0-2) unstable; urgency=medium
 
   * Update standards version to 3.9.7
